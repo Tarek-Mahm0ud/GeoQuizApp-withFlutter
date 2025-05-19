@@ -105,8 +105,8 @@ class AboutPage extends StatelessWidget {
                     Expanded(
                       child: ElevatedButton.icon(
                         onPressed: () async {
-                          final Uri _url = Uri.parse('https://facebook.com');
-                          await launchUrl(_url);
+                          final Uri url = Uri.parse('https://facebook.com');
+                          await launchUrl(url);
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF3b5998),
@@ -130,8 +130,8 @@ class AboutPage extends StatelessWidget {
                     Expanded(
                       child: ElevatedButton.icon(
                         onPressed: () async {
-                          final Uri _url = Uri.parse('https://google.com');
-                          await launchUrl(_url);
+                          final Uri url = Uri.parse('https://google.com');
+                          await launchUrl(url);
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFFDB4437),
