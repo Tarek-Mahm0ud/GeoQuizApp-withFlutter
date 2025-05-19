@@ -43,7 +43,7 @@ class _QuestionPageState extends State<QuestionPage> {
   @override
   Widget build(BuildContext context) {
     if (currentQuestionIndex >= questions.length) {
-      return end_screen(
+      return EndScreen(
         score: score,
         totalQuestions: questions.length,
       );

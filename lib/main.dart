@@ -20,9 +20,8 @@ class QuizApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF7A6BF5),
-          brightness: Brightness.dark,
+          brightness: Brightness.light,
         ),
-        useMaterial3: true,
         textTheme: GoogleFonts.poppinsTextTheme(
           Theme.of(context).textTheme,
         ),

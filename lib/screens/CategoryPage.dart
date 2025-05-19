@@ -25,7 +25,7 @@ class CategoryPage extends StatelessWidget {
               Text(
                 'Choose a Quiz Category',
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  color: colorScheme.onBackground,
+                  
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
@@ -102,10 +102,6 @@ class CategoryPage extends StatelessWidget {
               const SizedBox(height: 16),
               Text(
                 title,
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  color: colorScheme.onSurface,
-                  fontWeight: FontWeight.bold,
-                ),
                 textAlign: TextAlign.center,
               ),
             ],

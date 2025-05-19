@@ -1,6 +1,6 @@
 // lib/screens/about_page.dart
 import 'package:flutter/material.dart';
-import 'url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class AboutPage extends StatelessWidget {
         title: const Text(
           'About GeoQuiz',
           style: TextStyle(
-            color: Colors.white,
+            color: Color.fromARGB(255, 255, 255, 255),
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -52,7 +52,7 @@ class AboutPage extends StatelessWidget {
                 const Text(
                   'What is GeoQuiz?',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 0, 0, 0),
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                   ),
@@ -61,7 +61,7 @@ class AboutPage extends StatelessWidget {
                 const Text(
                   'GeoQuiz is a fun and engaging quiz application that tests your knowledge across various categories. Flags, capitals etc.. , we\'ve got everything covered to challenge your intellect.',
                   style: TextStyle(
-                    color: Colors.white70,
+                    color: Color.fromARGB(179, 0, 0, 0),
                     fontSize: 16,
                   ),
                 ),
@@ -69,7 +69,7 @@ class AboutPage extends StatelessWidget {
                 const Text(
                   'How to play:',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 0, 0, 0),
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -82,7 +82,7 @@ class AboutPage extends StatelessWidget {
                   '4. Complete the quiz to see your final score\n'
                   '5. Share your results with friends and challenge them!',
                   style: TextStyle(
-                    color: Color.fromARGB(203, 255, 255, 255),
+                    color: Color.fromARGB(202, 0, 0, 0),
                     fontSize: 16,
                     height: 1.5,
                   ),
@@ -92,7 +92,7 @@ class AboutPage extends StatelessWidget {
                 const Text(
                   'Connect with us:',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 0, 0, 0),
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -104,8 +104,9 @@ class AboutPage extends StatelessWidget {
                     // Facebook Button
                     Expanded(
                       child: ElevatedButton.icon(
-                        onPressed: () {
-                          launchURL(context, 'https://facebook.com');
+                        onPressed: () async {
+                          final Uri _url = Uri.parse('https://facebook.com');
+                          await launchUrl(_url);
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF3b5998),
@@ -118,7 +119,7 @@ class AboutPage extends StatelessWidget {
                         label: const Text(
                           'Facebook',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 255, 255, 255),
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -128,8 +129,9 @@ class AboutPage extends StatelessWidget {
                     // Google Button
                     Expanded(
                       child: ElevatedButton.icon(
-                        onPressed: () {
-                          launchURL(context, 'https://google.com');
+                        onPressed: () async {
+                          final Uri _url = Uri.parse('https://google.com');
+                          await launchUrl(_url);
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFFDB4437),
@@ -142,7 +144,7 @@ class AboutPage extends StatelessWidget {
                         label: const Text(
                           'Google',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 255, 255, 255),
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -156,7 +158,7 @@ class AboutPage extends StatelessWidget {
                     child: Text(
                       '© 2025 GeoQuiz. All rights reserved.',
                       style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
+                        color: Color.fromARGB(255, 0, 0, 0),
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),

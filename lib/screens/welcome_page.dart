@@ -23,7 +23,7 @@ class WelcomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                 ),
                 child: Center(
-                  child: Image.asset('/assets/images/app_logo_12.png'),
+                  child: Image.asset('assets/images/app_logo_12.png'),
                 ),
               ),
               const SizedBox(height: 24),
@@ -37,12 +37,9 @@ class WelcomePage extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               // Description
-              Text(
+              const Text(
                 'Challenge yourself with quick quizzes to test your knowledge. Tap the options at the top right to check out the Categories. Let\'s win prizes together!',
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  color: colorScheme.onBackground.withOpacity(0.8),
-                ),
               ),
               const Spacer(),
               // Choose Categories Button

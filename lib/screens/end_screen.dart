@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:task/models/Question.dart';
 import 'package:flutter/services.dart';
 
-class end_screen extends StatelessWidget {
+class EndScreen extends StatelessWidget {
   final int score;
   final int totalQuestions;
 
-  const end_screen({
+  const EndScreen({
     super.key,
     required this.score,
     required this.totalQuestions,
@@ -32,18 +31,16 @@ class end_screen extends StatelessWidget {
                   color: colorScheme.primary,
                   borderRadius: BorderRadius.circular(50),
                 ),
-                child: const Center(
-                  child: Text(
-                    '🗺',
-                    style: TextStyle(fontSize: 50),
-                  ),
+                child: Center(
+                  child: Image.asset('assets/images/app_logo_12.png'),
                 ),
               ),
               const SizedBox(height: 24),
               // Title
               Text( 
                 'Your Score is $score/$totalQuestions',
-                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                style: TextStyle(
+                  fontSize: 28,
                   color: colorScheme.onSurface,
                   fontWeight: FontWeight.bold,
                 ),
@@ -52,7 +49,7 @@ class end_screen extends StatelessWidget {
               // Choose Categories Button
               FilledButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/categories');
+                  Navigator.pushReplacementNamed(context, '/categories');
                 },
                 style: FilledButton.styleFrom(
                   minimumSize: const Size(double.infinity, 56),
@@ -69,10 +66,31 @@ class end_screen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              // About Button
+              // Exit Button
               OutlinedButton(
                 onPressed: () {
-                  SystemNavigator.pop();
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text('Exit App'),
+                        content: const Text('Are you sure you want to exit the app?'),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(context),
+                            child: const Text('Cancel'),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                              SystemNavigator.pop();
+                            },
+                            child: const Text('Exit'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
                 },
                 style: OutlinedButton.styleFrom(
                   side: BorderSide(color: colorScheme.primary),
