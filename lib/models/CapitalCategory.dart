@@ -18,7 +18,7 @@ class CapitalsCategory extends Category {
       questions.add(
         Question(
           image: c.imagePath, 
-          correctAns: c.capital, 
+          correctAns: c.capital,
           opt: allOptions
         ),
       );

@@ -15,7 +15,6 @@ class WelcomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 40),
-              // Map emoji icon
               Container(
                 width: 100,
                 height: 100,
@@ -23,16 +22,13 @@ class WelcomePage extends StatelessWidget {
                   color: colorScheme.primary,
                   borderRadius: BorderRadius.circular(50),
                 ),
-                child: const Center(
-                  child: Text(
-                    '🗺',
-                    style: TextStyle(fontSize: 50),
-                  ),
+                child: Center(
+                  child: Image.asset('/assets/images/app_logo_12.png'),
                 ),
               ),
               const SizedBox(height: 24),
               // Title
-              Text( 
+              Text(
                 'Ready for a GeoQuiz?',
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   color: colorScheme.onBackground,
